@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Data
+data/raw/*
+data/processed/*
+data/enriched/*
+data/final/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/enriched/.gitkeep
+!data/final/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
