@@ -17,6 +17,12 @@ class Config:
     REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
     REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "EngramLeadScraper/1.0 by /u/Engram")
     
+    # Regional Platforms
+    QIITA_API_KEY = os.getenv("QIITA_API_KEY")
+    # For CSDN and Juejin, we might use public endpoints, but having keys for future use is good.
+    CSDN_API_KEY = os.getenv("CSDN_API_KEY")
+    JUEJIN_API_KEY = os.getenv("JUEJIN_API_KEY")
+    
     # Storage Paths
     DATA_DIR = "data"
     RAW_DIR = os.path.join(DATA_DIR, "raw")

@@ -5,6 +5,11 @@ from src.collectors.reddit_collector import RedditCollector
 from src.collectors.dev_collector import DevCollector
 from src.collectors.medium_collector import MediumCollector
 from src.collectors.hn_collector import HackerNewsCollector
+from src.collectors.qiita_collector import QiitaCollector
+from src.collectors.csdn_collector import CSDNCollector
+from src.collectors.juejin_collector import JuejinCollector
+from src.collectors.telegram_collector import TelegramCollector
+from src.collectors.facebook_collector import FacebookCollector
 from src.processors.data_processor import LeadProcessor
 from src.processors.categorizer import LeadCategorizer
 from src.enrichers.lead_enricher import LeadEnricher
@@ -33,7 +38,12 @@ def main():
             RedditCollector(),
             DevCollector(tags=["ai", "machinelearning", "backend"]),
             MediumCollector(tags=["ai", "machine-learning", "backend-development"]),
-            HackerNewsCollector(query=args.query)
+            HackerNewsCollector(query=args.query),
+            QiitaCollector(query="エージェント AI"), # Japanese: Agent AI
+            CSDNCollector(query="智能体 AI"), # Chinese: Agent AI
+            JuejinCollector(query="智能体 AI"),
+            TelegramCollector(), # Manual ingestion placeholder
+            FacebookCollector()  # Manual ingestion placeholder
         ]
         processor = LeadProcessor()
         categorizer = LeadCategorizer()
