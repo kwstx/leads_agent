@@ -2,3 +2,4 @@ requests
 pandas
 pydantic
 python-dotenv
+praw

@@ -7,6 +7,11 @@ class Config:
     GITHUB_API_KEY = os.getenv("GITHUB_API_KEY")
     HUNTER_API_KEY = os.getenv("HUNTER_API_KEY")
     
+    # Reddit Config
+    REDDIT_CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
+    REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
+    REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "EngramLeadScraper/1.0 by /u/Engram")
+    
     # Storage Paths
     DATA_DIR = "data"
     RAW_DIR = os.path.join(DATA_DIR, "raw")
