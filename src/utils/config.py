@@ -7,6 +7,11 @@ class Config:
     GITHUB_API_KEY = os.getenv("GITHUB_API_KEY")
     HUNTER_API_KEY = os.getenv("HUNTER_API_KEY")
     
+    # LLM Config
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.openai.com/v1")
+    LLM_MODEL = os.getenv("LLM_MODEL", "gpt-4o")
+
     # Reddit Config
     REDDIT_CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
     REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")

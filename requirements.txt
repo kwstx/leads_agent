@@ -5,3 +5,4 @@ python-dotenv
 praw
 beautifulsoup4
 lxml
+openai
