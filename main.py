@@ -2,6 +2,9 @@ import argparse
 import sys
 from src.collectors.github_collector import GithubCollector
 from src.collectors.reddit_collector import RedditCollector
+from src.collectors.dev_collector import DevCollector
+from src.collectors.medium_collector import MediumCollector
+from src.collectors.hn_collector import HackerNewsCollector
 from src.processors.data_processor import LeadProcessor
 from src.processors.categorizer import LeadCategorizer
 from src.enrichers.lead_enricher import LeadEnricher
@@ -27,7 +30,10 @@ def main():
         # Set up pipeline
         collectors = [
             GithubCollector(query=args.query),
-            RedditCollector()
+            RedditCollector(),
+            DevCollector(tags=["ai", "machinelearning", "backend"]),
+            MediumCollector(tags=["ai", "machine-learning", "backend-development"]),
+            HackerNewsCollector(query=args.query)
         ]
         processor = LeadProcessor()
         categorizer = LeadCategorizer()
