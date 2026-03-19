@@ -56,7 +56,10 @@ Response must be valid JSON only."""
             )
             return json.loads(response.choices[0].message.content)
         except Exception as e:
-            print(f"Error enriching content: {e}")
+            if "Connection error" in str(e):
+                print(f"CRITICAL: Could not connect to Ollama at {self.base_url}. Is it running? (Command: 'ollama serve')")
+            else:
+                print(f"Error enriching content: {e}")
             return {
                 "is_relevant": False,
                 "problem_description": f"Error: {str(e)}",

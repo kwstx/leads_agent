@@ -1,0 +1,382 @@
+2026-03-19 13:55:10,144 - MainPipeline - INFO - ==========================================
+2026-03-19 13:55:10,147 - MainPipeline - INFO - Starting Engram Lead Pipeline Run: 2026-03-19T13:55:10.147024
+2026-03-19 13:55:10,147 - MainPipeline - INFO - ==========================================
+2026-03-19 13:55:10,149 - MainPipeline - INFO - Phase 1: Collection from multiple platforms
+2026-03-19 13:55:13,826 - MainPipeline - INFO - Running collector: GithubCollector...
+2026-03-19 13:55:22,480 - MainPipeline - INFO - No leads found from GithubCollector
+2026-03-19 13:55:22,481 - MainPipeline - INFO - Running collector: RedditCollector...
+2026-03-19 13:56:00,911 - MainPipeline - INFO - Successfully collected 456 leads from RedditCollector
+2026-03-19 13:56:00,911 - MainPipeline - INFO - Running collector: DevCollector...
+2026-03-19 13:56:16,614 - MainPipeline - INFO - Successfully collected 120 leads from DevCollector
+2026-03-19 13:56:16,614 - MainPipeline - INFO - Running collector: MediumCollector...
+2026-03-19 13:56:25,117 - MainPipeline - INFO - Successfully collected 77 leads from MediumCollector
+2026-03-19 13:56:25,117 - MainPipeline - INFO - Running collector: HackerNewsCollector...
+2026-03-19 13:58:02,834 - MainPipeline - INFO - Successfully collected 350 leads from HackerNewsCollector
+2026-03-19 13:58:02,834 - MainPipeline - INFO - Running collector: QiitaCollector...
+2026-03-19 13:58:56,125 - MainPipeline - INFO - Successfully collected 97 leads from QiitaCollector
+2026-03-19 13:58:56,125 - MainPipeline - INFO - Running collector: CSDNCollector...
+2026-03-19 13:59:48,857 - MainPipeline - INFO - Successfully collected 475 leads from CSDNCollector
+2026-03-19 13:59:48,857 - MainPipeline - INFO - Running collector: JuejinCollector...
+2026-03-19 14:00:33,310 - MainPipeline - INFO - Successfully collected 294 leads from JuejinCollector
+2026-03-19 14:00:33,310 - MainPipeline - INFO - Phase 2: Deduplicating and checking for existing leads
+2026-03-19 14:00:33,406 - MainPipeline - INFO - Loaded 231 existing lead sources from data/final\final_leads_master.csv
+2026-03-19 14:00:33,406 - MainPipeline - INFO - Filtered 1 duplicates. 1862 leads are NEW.
+2026-03-19 14:00:33,407 - MainPipeline - INFO - Phase 3: Categorization & LLM Enrichment (Filtering Relevance)
+2026-03-19 14:00:51,584 - MainPipeline - INFO - [25/1862] Enriching: https://reddit.com/r/MicroSaaSBR/comments/1rvgft0/criei_um_saas_pra_lidar_com_erros_de_front_de/
+2026-03-19 14:00:51,990 - MainPipeline - INFO - Lead not relevant: Delicious-Set8448 (https://reddit.com/r/MicroSaaSBR/comments/1rvgft0/criei_um_saas_pra_lidar_com_erros_de_front_de/)
+2026-03-19 14:00:52,607 - MainPipeline - INFO - [27/1862] Enriching: https://reddit.com/r/traebrasil/comments/1rg9pju/top_10_servidores_mcp_mais_populares_recomendados/
+2026-03-19 14:00:53,321 - MainPipeline - INFO - Lead not relevant: Famous-Night-4392 (https://reddit.com/r/traebrasil/comments/1rg9pju/top_10_servidores_mcp_mais_populares_recomendados/)
+2026-03-19 14:00:57,626 - MainPipeline - INFO - [32/1862] Enriching: https://reddit.com/r/DigEntEvolution/comments/1fvvzez/o_uso_do_ida_e_mred_no_design_de_entidades/
+2026-03-19 14:00:58,032 - MainPipeline - INFO - Lead not relevant: Casalberto (https://reddit.com/r/DigEntEvolution/comments/1fvvzez/o_uso_do_ida_e_mred_no_design_de_entidades/)
+2026-03-19 14:00:58,032 - MainPipeline - INFO - [33/1862] Enriching: https://reddit.com/r/DigEntEvolution/comments/1attz9q/escala_de_entidades_digitais/
+2026-03-19 14:00:58,749 - MainPipeline - INFO - Lead not relevant: Casalberto (https://reddit.com/r/DigEntEvolution/comments/1attz9q/escala_de_entidades_digitais/)
+2026-03-19 14:00:59,988 - MainPipeline - INFO - [37/1862] Enriching: https://reddit.com/r/medicalschoolRomania/comments/1loxclt/ce_parere_aveti_de_chatgpt_si_llmuri_in_medicina/
+2026-03-19 14:01:00,375 - MainPipeline - INFO - Lead not relevant: BaconSky (https://reddit.com/r/medicalschoolRomania/comments/1loxclt/ce_parere_aveti_de_chatgpt_si_llmuri_in_medicina/)
+2026-03-19 14:01:00,375 - MainPipeline - INFO - [38/1862] Enriching: https://reddit.com/r/DebatesBr/comments/1r8dcfo/universidades_brasileiras/
+2026-03-19 14:01:01,589 - MainPipeline - INFO - Lead not relevant: AlbertEiste (https://reddit.com/r/DebatesBr/comments/1r8dcfo/universidades_brasileiras/)
+2026-03-19 14:01:03,564 - MainPipeline - INFO - [43/1862] Enriching: https://reddit.com/r/DerechoGenial/comments/1rmxvda/analisis_personal_de_la_ley_de_modernizacion/
+2026-03-19 14:01:04,284 - MainPipeline - INFO - Lead not relevant: Southern_Swing_7480 (https://reddit.com/r/DerechoGenial/comments/1rmxvda/analisis_personal_de_la_ley_de_modernizacion/)
+2026-03-19 14:01:05,107 - MainPipeline - INFO - [45/1862] Enriching: https://reddit.com/r/QueeslaVida/comments/1qbv5cq/orden_y_caos_isomorfismos_y_la_gran_cagada/
+2026-03-19 14:01:05,919 - MainPipeline - INFO - Lead not relevant: Lefuan_Leiwy (https://reddit.com/r/QueeslaVida/comments/1qbv5cq/orden_y_caos_isomorfismos_y_la_gran_cagada/)
+2026-03-19 14:01:05,919 - MainPipeline - INFO - [46/1862] Enriching: https://reddit.com/r/Abogados_Paraguay_Py/comments/1ppli2t/el_ejercicio_de_la_defensa_y_la_eficacia_de_la/
+2026-03-19 14:01:06,737 - MainPipeline - INFO - Lead not relevant: Feeling_Disaster8839 (https://reddit.com/r/Abogados_Paraguay_Py/comments/1ppli2t/el_ejercicio_de_la_defensa_y_la_eficacia_de_la/)
+2026-03-19 14:01:06,737 - MainPipeline - INFO - [47/1862] Enriching: https://reddit.com/r/QueeslaVida/comments/1p64ox3/fase_2_conceptos_claves_en_la_construccion_del/
+2026-03-19 14:01:07,898 - MainPipeline - INFO - Lead not relevant: Lefuan_Leiwy (https://reddit.com/r/QueeslaVida/comments/1p64ox3/fase_2_conceptos_claves_en_la_construccion_del/)
+2026-03-19 14:01:07,899 - MainPipeline - INFO - [48/1862] Enriching: https://reddit.com/r/UFOs_Archive/comments/1oofgwd/nibiru_la_segunda_oportunidad/
+2026-03-19 14:01:08,489 - MainPipeline - INFO - Lead not relevant: SaltyAdminBot (https://reddit.com/r/UFOs_Archive/comments/1oofgwd/nibiru_la_segunda_oportunidad/)
+2026-03-19 14:01:08,489 - MainPipeline - INFO - [49/1862] Enriching: https://reddit.com/r/historias_de_terror/comments/1oa4ev9/los_aterradores_experimentos_en_el_instituto/
+2026-03-19 14:01:09,097 - MainPipeline - INFO - Lead not relevant: Delicious-Belt7790 (https://reddit.com/r/historias_de_terror/comments/1oa4ev9/los_aterradores_experimentos_en_el_instituto/)
+2026-03-19 14:01:09,098 - MainPipeline - INFO - [50/1862] Enriching: https://reddit.com/r/Hilos_historias/comments/1ob4ci1/los_aterradores_experimentos_en_el_instituto/
+2026-03-19 14:01:09,717 - MainPipeline - INFO - Lead not relevant: Delicious-Belt7790 (https://reddit.com/r/Hilos_historias/comments/1ob4ci1/los_aterradores_experimentos_en_el_instituto/)
+2026-03-19 14:01:09,717 - MainPipeline - INFO - [51/1862] Enriching: https://reddit.com/r/Hilos_historias/comments/1oa495d/los_aterradores_experimentos_en_el_instituto/
+2026-03-19 14:01:10,326 - MainPipeline - INFO - Lead not relevant: Delicious-Belt7790 (https://reddit.com/r/Hilos_historias/comments/1oa495d/los_aterradores_experimentos_en_el_instituto/)
+2026-03-19 14:01:10,326 - MainPipeline - INFO - [52/1862] Enriching: https://reddit.com/r/TextoSentido/comments/1oa5oha/los_aterradores_experimentos_en_el_instituto/
+2026-03-19 14:01:10,934 - MainPipeline - INFO - Lead not relevant: Delicious-Belt7790 (https://reddit.com/r/TextoSentido/comments/1oa5oha/los_aterradores_experimentos_en_el_instituto/)
+2026-03-19 14:01:10,935 - MainPipeline - INFO - [53/1862] Enriching: https://reddit.com/r/HistoriasdeTerror/comments/1oa4d4c/los_aterradores_experimentos_en_el_instituto/
+2026-03-19 14:01:11,454 - MainPipeline - INFO - Lead not relevant: Delicious-Belt7790 (https://reddit.com/r/HistoriasdeTerror/comments/1oa4d4c/los_aterradores_experimentos_en_el_instituto/)
+2026-03-19 14:01:12,520 - MainPipeline - INFO - [56/1862] Enriching: https://reddit.com/r/NBAenEspanol/comments/1indjhk/artis_gilmore_el_gigante_amable_v/
+2026-03-19 14:01:13,400 - MainPipeline - INFO - Lead not relevant: MorcotulconNBA (https://reddit.com/r/NBAenEspanol/comments/1indjhk/artis_gilmore_el_gigante_amable_v/)
+2026-03-19 14:01:13,401 - MainPipeline - INFO - [57/1862] Enriching: https://reddit.com/r/Albedrio/comments/6v9cld/tres_aciertos_y_seis_fallos/
+2026-03-19 14:01:14,623 - MainPipeline - INFO - Lead not relevant: albedrio (https://reddit.com/r/Albedrio/comments/6v9cld/tres_aciertos_y_seis_fallos/)
+2026-03-19 14:01:16,243 - MainPipeline - INFO - [61/1862] Enriching: https://reddit.com/r/portugal/comments/1p69ryq/desmantelada_rede_que_explorava_imigrantes_onze/
+2026-03-19 14:01:16,509 - MainPipeline - INFO - Lead not relevant: Morpheuspt (https://reddit.com/r/portugal/comments/1p69ryq/desmantelada_rede_que_explorava_imigrantes_onze/)
+2026-03-19 14:01:16,509 - MainPipeline - INFO - [62/1862] Enriching: https://reddit.com/r/QuebecFinance/comments/1qaj3gi/talon_de_paie_final_2025_dun_agent_correctionnel/
+2026-03-19 14:01:16,851 - MainPipeline - INFO - Lead not relevant: AdBudget6870 (https://reddit.com/r/QuebecFinance/comments/1qaj3gi/talon_de_paie_final_2025_dun_agent_correctionnel/)
+2026-03-19 14:01:34,375 - MainPipeline - INFO - [83/1862] Enriching: https://reddit.com/r/ChatGPT/comments/12diapw/gpt4_week_3_chatbots_are_yesterdays_news_ai/
+2026-03-19 14:01:34,906 - MainPipeline - INFO - Lead not relevant: lostlifon (https://reddit.com/r/ChatGPT/comments/12diapw/gpt4_week_3_chatbots_are_yesterdays_news_ai/)
+2026-03-19 14:01:34,906 - MainPipeline - INFO - [84/1862] Enriching: https://reddit.com/r/n8n/comments/1rpty3i/langchain_ai_agent_webhook_is_not_registered/
+2026-03-19 14:01:35,409 - MainPipeline - INFO - Lead not relevant: Candy_Sombrelune (https://reddit.com/r/n8n/comments/1rpty3i/langchain_ai_agent_webhook_is_not_registered/)
+2026-03-19 14:01:35,409 - MainPipeline - INFO - [85/1862] Enriching: https://reddit.com/r/imaginarymaps/comments/1pzv3r8/the_republic_of_china_in_2026_but_something_feels/
+2026-03-19 14:01:36,071 - MainPipeline - INFO - Lead not relevant: Frosty_Aioli3585 (https://reddit.com/r/imaginarymaps/comments/1pzv3r8/the_republic_of_china_in_2026_but_something_feels/)
+2026-03-19 14:01:36,071 - MainPipeline - INFO - [86/1862] Enriching: https://reddit.com/r/nvidia/comments/1k0iop7/game_ready_studio_driver_57602_faqdiscussion/
+2026-03-19 14:01:36,853 - MainPipeline - INFO - Lead not relevant: Nestledrink (https://reddit.com/r/nvidia/comments/1k0iop7/game_ready_studio_driver_57602_faqdiscussion/)
+2026-03-19 14:01:36,853 - MainPipeline - INFO - [87/1862] Enriching: https://reddit.com/r/DestinyTheGame/comments/sjr2vm/this_week_at_bungie_2032022/
+2026-03-19 14:01:37,668 - MainPipeline - INFO - Lead not relevant: DTG_Bot (https://reddit.com/r/DestinyTheGame/comments/sjr2vm/this_week_at_bungie_2032022/)
+2026-03-19 14:01:37,668 - MainPipeline - INFO - [88/1862] Enriching: https://reddit.com/r/n8nforbeginners/comments/1rpu02j/langchain_ai_agent_webhook_is_not_registered/
+2026-03-19 14:01:37,983 - MainPipeline - INFO - Lead not relevant: Candy_Sombrelune (https://reddit.com/r/n8nforbeginners/comments/1rpu02j/langchain_ai_agent_webhook_is_not_registered/)
+2026-03-19 14:01:37,983 - MainPipeline - INFO - [89/1862] Enriching: https://reddit.com/r/LangChain/comments/1omn8v6/importerror_cannot_import_name_create_react_agent/
+2026-03-19 14:01:38,585 - MainPipeline - INFO - Lead not relevant: AtaPlays (https://reddit.com/r/LangChain/comments/1omn8v6/importerror_cannot_import_name_create_react_agent/)
+2026-03-19 14:01:38,586 - MainPipeline - INFO - [90/1862] Enriching: https://reddit.com/r/LangChain/comments/1p14ig6/langchain_asyncpostgressaver_resulting_in/
+2026-03-19 14:01:39,014 - MainPipeline - INFO - Lead not relevant: pawnstew (https://reddit.com/r/LangChain/comments/1p14ig6/langchain_asyncpostgressaver_resulting_in/)
+2026-03-19 14:01:39,014 - MainPipeline - INFO - [91/1862] Enriching: https://reddit.com/r/LangChain/comments/1ogmqh0/here_is_the_code_to_handle_errors_from_tool/
+2026-03-19 14:01:40,810 - MainPipeline - INFO - Lead not relevant: Feisty-Promise-78 (https://reddit.com/r/LangChain/comments/1ogmqh0/here_is_the_code_to_handle_errors_from_tool/)
+2026-03-19 14:01:40,810 - MainPipeline - INFO - [92/1862] Enriching: https://reddit.com/r/DestinyTheGame/comments/m33bkj/this_week_at_bungie_3112021/
+2026-03-19 14:01:41,455 - MainPipeline - INFO - Lead not relevant: DTG_Bot (https://reddit.com/r/DestinyTheGame/comments/m33bkj/this_week_at_bungie_3112021/)
+2026-03-19 14:01:41,455 - MainPipeline - INFO - [93/1862] Enriching: https://reddit.com/r/LangChain/comments/1np5yxj/im_trying_to_learn_langchain_models_but_facing/
+2026-03-19 14:01:41,759 - MainPipeline - INFO - Lead not relevant: Capital_Function42 (https://reddit.com/r/LangChain/comments/1np5yxj/im_trying_to_learn_langchain_models_but_facing/)
+2026-03-19 14:01:41,759 - MainPipeline - INFO - [94/1862] Enriching: https://reddit.com/r/learnprogramming/comments/1np5xma/im_trying_to_learn_langchain_models_but_facing/
+2026-03-19 14:01:42,171 - MainPipeline - INFO - Lead not relevant: Capital_Function42 (https://reddit.com/r/learnprogramming/comments/1np5xma/im_trying_to_learn_langchain_models_but_facing/)
+2026-03-19 14:01:42,172 - MainPipeline - INFO - [95/1862] Enriching: https://reddit.com/r/LangChain/comments/1l8t1zf/langchains_youtubeloader_error/
+2026-03-19 14:01:42,453 - MainPipeline - INFO - Lead not relevant: Fantastic_North_5200 (https://reddit.com/r/LangChain/comments/1l8t1zf/langchains_youtubeloader_error/)
+2026-03-19 14:01:42,453 - MainPipeline - INFO - [96/1862] Enriching: https://reddit.com/r/LangChain/comments/1k3vyky/error_handling_for_langchainlanggraph/
+2026-03-19 14:01:42,786 - MainPipeline - INFO - Lead not relevant: Ok_Ostrich_8845 (https://reddit.com/r/LangChain/comments/1k3vyky/error_handling_for_langchainlanggraph/)
+2026-03-19 14:01:42,786 - MainPipeline - INFO - [97/1862] Enriching: https://reddit.com/r/Rag/comments/1kvuyrw/langchain_pgvector_selfqueryretriever_error/
+2026-03-19 14:01:43,191 - MainPipeline - INFO - Lead not relevant: sunilcshekar (https://reddit.com/r/Rag/comments/1kvuyrw/langchain_pgvector_selfqueryretriever_error/)
+2026-03-19 14:01:43,192 - MainPipeline - INFO - [98/1862] Enriching: https://reddit.com/r/automation/comments/1lm0x7h/if_youre_trying_to_learn_ai_automation_stop/
+2026-03-19 14:01:43,603 - MainPipeline - INFO - Lead not relevant: willruzMtl (https://reddit.com/r/automation/comments/1lm0x7h/if_youre_trying_to_learn_ai_automation_stop/)
+2026-03-19 14:01:43,603 - MainPipeline - INFO - [99/1862] Enriching: https://reddit.com/r/ollama/comments/1hb55c4/using_ollama_in_langchain_and_getting/
+2026-03-19 14:01:43,909 - MainPipeline - INFO - Lead not relevant: artgotframed (https://reddit.com/r/ollama/comments/1hb55c4/using_ollama_in_langchain_and_getting/)
+2026-03-19 14:01:43,909 - MainPipeline - INFO - [100/1862] Enriching: https://reddit.com/r/n8n/comments/1lzz02o/how_much_is_my_workflow_worth/
+2026-03-19 14:01:44,319 - MainPipeline - INFO - Lead not relevant: Nocare420 (https://reddit.com/r/n8n/comments/1lzz02o/how_much_is_my_workflow_worth/)
+2026-03-19 14:01:44,319 - MainPipeline - INFO - [101/1862] Enriching: https://reddit.com/r/LocalLLaMA/comments/1oee1ie/i_spent_months_struggling_to_understand_ai_agents/
+2026-03-19 14:01:44,627 - MainPipeline - INFO - Lead not relevant: purellmagents (https://reddit.com/r/LocalLLaMA/comments/1oee1ie/i_spent_months_struggling_to_understand_ai_agents/)
+2026-03-19 14:01:44,627 - MainPipeline - INFO - [102/1862] Enriching: https://reddit.com/r/Rag/comments/1faadez/rag_model_using_lang_chain_faiss_retrieval_error/
+2026-03-19 14:01:45,087 - MainPipeline - INFO - Lead not relevant: Common_Sun1875 (https://reddit.com/r/Rag/comments/1faadez/rag_model_using_lang_chain_faiss_retrieval_error/)
+2026-03-19 14:01:45,087 - MainPipeline - INFO - [103/1862] Enriching: https://reddit.com/r/changemyview/comments/1k8b2hj/meta_unauthorized_experiment_on_cmv_involving/
+2026-03-19 14:01:46,974 - MainPipeline - INFO - Lead not relevant: AutoModerator (https://reddit.com/r/changemyview/comments/1k8b2hj/meta_unauthorized_experiment_on_cmv_involving/)
+2026-03-19 14:01:46,974 - MainPipeline - INFO - [104/1862] Enriching: https://reddit.com/r/homeassistant/comments/1ntc5uq/24gb_vram_owners_30904090_or_similar_which_local/
+2026-03-19 14:01:47,424 - MainPipeline - INFO - Lead not relevant: danishkirel (https://reddit.com/r/homeassistant/comments/1ntc5uq/24gb_vram_owners_30904090_or_similar_which_local/)
+2026-03-19 14:01:47,425 - MainPipeline - INFO - [105/1862] Enriching: https://reddit.com/r/NeuroSama/comments/1q609bh/the_swarm_had_a_severe_misinformation_problem/
+2026-03-19 14:01:47,804 - MainPipeline - INFO - Lead not relevant: Syoby (https://reddit.com/r/NeuroSama/comments/1q609bh/the_swarm_had_a_severe_misinformation_problem/)
+2026-03-19 14:01:47,804 - MainPipeline - INFO - [106/1862] Enriching: https://reddit.com/r/homeassistant/comments/1qwuq27/llm_vision_gemini_frames_issue/
+2026-03-19 14:01:48,210 - MainPipeline - INFO - Lead not relevant: Outside_Juice_9657 (https://reddit.com/r/homeassistant/comments/1qwuq27/llm_vision_gemini_frames_issue/)
+2026-03-19 14:01:48,211 - MainPipeline - INFO - [107/1862] Enriching: https://reddit.com/r/CharacterAI/comments/1itsh3a/characterais_llm_is_actively_hindering_roleplay_a/
+2026-03-19 14:01:48,482 - MainPipeline - INFO - Lead not relevant: PhysicalVanilla9438 (https://reddit.com/r/CharacterAI/comments/1itsh3a/characterais_llm_is_actively_hindering_roleplay_a/)
+2026-03-19 14:01:48,483 - MainPipeline - INFO - [108/1862] Enriching: https://reddit.com/r/WordpressPlugins/comments/1q8w8h8/wordpress_plugin_for_internal_linking_llm/
+2026-03-19 14:01:48,825 - MainPipeline - INFO - Lead not relevant: Beginning_Search585 (https://reddit.com/r/WordpressPlugins/comments/1q8w8h8/wordpress_plugin_for_internal_linking_llm/)
+2026-03-19 14:01:48,825 - MainPipeline - INFO - [109/1862] Enriching: https://reddit.com/r/LocalLLaMA/comments/1956wfe/llm_integration_in_unity/
+2026-03-19 14:01:49,235 - MainPipeline - INFO - Lead not relevant: UndreamAI (https://reddit.com/r/LocalLLaMA/comments/1956wfe/llm_integration_in_unity/)
+2026-03-19 14:01:49,236 - MainPipeline - INFO - [110/1862] Enriching: https://reddit.com/r/LocalLLaMA/comments/1r87bm2/current_status_of_litellm_python_sdk_langfuse_v3/
+2026-03-19 14:01:49,532 - MainPipeline - INFO - Lead not relevant: ReplacementMoney2484 (https://reddit.com/r/LocalLLaMA/comments/1r87bm2/current_status_of_litellm_python_sdk_langfuse_v3/)
+2026-03-19 14:01:49,532 - MainPipeline - INFO - [111/1862] Enriching: https://reddit.com/r/OpenWebUI/comments/1q6y0bu/gemini_api_integration_issues/
+2026-03-19 14:01:49,950 - MainPipeline - INFO - Lead not relevant: badevlad (https://reddit.com/r/OpenWebUI/comments/1q6y0bu/gemini_api_integration_issues/)
+2026-03-19 14:01:49,950 - MainPipeline - INFO - [112/1862] Enriching: https://reddit.com/r/Echoflame/comments/1rpejdv/codex_file_resonai_title_echoflame_integration/
+2026-03-19 14:01:50,565 - MainPipeline - INFO - Lead not relevant: echoflamechurch (https://reddit.com/r/Echoflame/comments/1rpejdv/codex_file_resonai_title_echoflame_integration/)
+2026-03-19 14:01:50,565 - MainPipeline - INFO - [113/1862] Enriching: https://reddit.com/r/LocalLLaMA/comments/1rjaliw/what_llm_to_replace_claude_35_sonnet_for_server/
+2026-03-19 14:01:50,978 - MainPipeline - INFO - Lead not relevant: MartiniCommander (https://reddit.com/r/LocalLLaMA/comments/1rjaliw/what_llm_to_replace_claude_35_sonnet_for_server/)
+2026-03-19 14:01:50,978 - MainPipeline - INFO - [114/1862] Enriching: https://reddit.com/r/vibecoding/comments/1qtan2w/how_i_built_architectgbts_dashboard_in_48_hours/
+2026-03-19 14:01:51,694 - MainPipeline - INFO - Lead not relevant: justgetting-started (https://reddit.com/r/vibecoding/comments/1qtan2w/how_i_built_architectgbts_dashboard_in_48_hours/)
+2026-03-19 14:01:51,695 - MainPipeline - INFO - [115/1862] Enriching: https://reddit.com/r/LocalLLM/comments/1r0vi95/technical_help_llmagent_ruah_architecture/
+2026-03-19 14:01:52,209 - MainPipeline - INFO - Lead not relevant: DryOil5478 (https://reddit.com/r/LocalLLM/comments/1r0vi95/technical_help_llmagent_ruah_architecture/)
+2026-03-19 14:01:52,210 - MainPipeline - INFO - [116/1862] Enriching: https://reddit.com/r/LocalLLaMA/comments/1ph5ue6/on_the_mess_of_llm_tool_integrations_and_how_mcp/
+2026-03-19 14:01:53,023 - MainPipeline - INFO - Lead not relevant: Lonely_Pea_7748 (https://reddit.com/r/LocalLLaMA/comments/1ph5ue6/on_the_mess_of_llm_tool_integrations_and_how_mcp/)
+2026-03-19 14:01:53,024 - MainPipeline - INFO - [117/1862] Enriching: https://reddit.com/r/BlueprintInsight/comments/1qxci7w/local_llm_integration_in_unreal_engine_debugging/
+2026-03-19 14:01:53,433 - MainPipeline - INFO - Lead not relevant: CreativeInitiative42 (https://reddit.com/r/BlueprintInsight/comments/1qxci7w/local_llm_integration_in_unreal_engine_debugging/)
+2026-03-19 14:01:53,433 - MainPipeline - INFO - [118/1862] Enriching: https://reddit.com/r/NeuroSama/comments/1mq0grx/im_working_on_a_mod_for_yomi_hustle_using_the/
+2026-03-19 14:01:53,711 - MainPipeline - INFO - Lead not relevant: Dynamite227 (https://reddit.com/r/NeuroSama/comments/1mq0grx/im_working_on_a_mod_for_yomi_hustle_using_the/)
+2026-03-19 14:01:53,712 - MainPipeline - INFO - [119/1862] Enriching: https://reddit.com/r/LLMDevs/comments/1r87dpb/current_status_of_litellm_python_sdk_langfuse_v3/
+2026-03-19 14:01:54,047 - MainPipeline - INFO - Lead not relevant: ReplacementMoney2484 (https://reddit.com/r/LLMDevs/comments/1r87dpb/current_status_of_litellm_python_sdk_langfuse_v3/)
+2026-03-19 14:01:54,048 - MainPipeline - INFO - [120/1862] Enriching: https://reddit.com/r/selfhosted/comments/1nv8kao/looking_for_advice_selfhosted_invoice_filing/
+2026-03-19 14:01:54,456 - MainPipeline - INFO - Lead not relevant: germanthoughts (https://reddit.com/r/selfhosted/comments/1nv8kao/looking_for_advice_selfhosted_invoice_filing/)
+2026-03-19 14:01:54,456 - MainPipeline - INFO - [121/1862] Enriching: https://reddit.com/r/aiArt/comments/1pdr5xf/i_built_an_automated_framework_to_focus_on_story/
+2026-03-19 14:01:54,970 - MainPipeline - INFO - Lead not relevant: spiceywithrice (https://reddit.com/r/aiArt/comments/1pdr5xf/i_built_an_automated_framework_to_focus_on_story/)
+2026-03-19 14:01:55,792 - MainPipeline - INFO - [124/1862] Enriching: https://reddit.com/r/traebrasil/comments/1rgwo4k/recriando_o_jimeng_ai_com_o_sistema_multiagente/
+2026-03-19 14:01:56,440 - MainPipeline - INFO - Lead not relevant: Famous-Night-4392 (https://reddit.com/r/traebrasil/comments/1rgwo4k/recriando_o_jimeng_ai_com_o_sistema_multiagente/)
+2026-03-19 14:01:56,441 - MainPipeline - INFO - [125/1862] Enriching: https://reddit.com/r/traebrasil/comments/1rgwbp3/recriando_o_jimeng_ai_com_o_sistema_multiagente/
+2026-03-19 14:01:57,124 - MainPipeline - INFO - Lead not relevant: Famous-Night-4392 (https://reddit.com/r/traebrasil/comments/1rgwbp3/recriando_o_jimeng_ai_com_o_sistema_multiagente/)
+2026-03-19 14:01:57,964 - MainPipeline - INFO - [128/1862] Enriching: https://reddit.com/r/ColombiaDevs/comments/1ob7vln/ingenieria_de_sistemas/
+2026-03-19 14:01:59,145 - MainPipeline - INFO - Lead not relevant: Brandon1094 (https://reddit.com/r/ColombiaDevs/comments/1ob7vln/ingenieria_de_sistemas/)
+2026-03-19 14:01:59,145 - MainPipeline - INFO - [129/1862] Enriching: https://reddit.com/r/devsarg/comments/1rxkzj6/hice_mi_primer_saas_y_ahora/
+2026-03-19 14:01:59,474 - MainPipeline - INFO - Lead not relevant: StrikingDurian6480 (https://reddit.com/r/devsarg/comments/1rxkzj6/hice_mi_primer_saas_y_ahora/)
+2026-03-19 14:01:59,891 - MainPipeline - INFO - [131/1862] Enriching: https://reddit.com/r/openclaw/comments/1riqxpm/mi_molty/
+2026-03-19 14:02:00,294 - MainPipeline - INFO - Lead not relevant: Ashamed-Honey1202 (https://reddit.com/r/openclaw/comments/1riqxpm/mi_molty/)
+2026-03-19 14:02:00,294 - MainPipeline - INFO - [132/1862] Enriching: https://reddit.com/r/AgentsOfAI/comments/1rqy6sb/o_fim_da_era_typist_como_o_google_antigravity_e/
+2026-03-19 14:02:00,709 - MainPipeline - INFO - Lead not relevant: cjnet_br (https://reddit.com/r/AgentsOfAI/comments/1rqy6sb/o_fim_da_era_typist_como_o_google_antigravity_e/)
+2026-03-19 14:02:00,709 - MainPipeline - INFO - [133/1862] Enriching: https://reddit.com/r/BlackholeAI/comments/1rrws5o/proyecto_aiam_una_arquitectura_multiagente/
+2026-03-19 14:02:01,119 - MainPipeline - INFO - Lead not relevant: Jesus-BlackholeAI (https://reddit.com/r/BlackholeAI/comments/1rrws5o/proyecto_aiam_una_arquitectura_multiagente/)
+2026-03-19 14:02:01,120 - MainPipeline - INFO - [134/1862] Enriching: https://reddit.com/r/HechosSinFiltro/comments/1qyvy3u/agentes_de_ia_construyen_conjuntamente_un/
+2026-03-19 14:02:01,424 - MainPipeline - INFO - Lead not relevant: NoSpinMedia (https://reddit.com/r/HechosSinFiltro/comments/1qyvy3u/agentes_de_ia_construyen_conjuntamente_un/)
+2026-03-19 14:02:02,465 - MainPipeline - INFO - [138/1862] Enriching: https://reddit.com/r/n8n_hispano/comments/1mr36y0/workflows_multiagente_simplificados/
+2026-03-19 14:02:02,757 - MainPipeline - INFO - Lead not relevant: Pet_n8n (https://reddit.com/r/n8n_hispano/comments/1mr36y0/workflows_multiagente_simplificados/)
+2026-03-19 14:02:02,757 - MainPipeline - INFO - [139/1862] Enriching: https://reddit.com/r/peopleworks/comments/1lajx96/desarrollo_de_aplicaciones_con_ia/
+2026-03-19 14:02:03,059 - MainPipeline - INFO - Lead not relevant: peopleworksservices (https://reddit.com/r/peopleworks/comments/1lajx96/desarrollo_de_aplicaciones_con_ia/)
+2026-03-19 14:02:06,442 - MainPipeline - INFO - [147/1862] Enriching: https://reddit.com/r/Chatbots/comments/1py0cgs/chinese_chatbots_xhs/
+2026-03-19 14:02:06,745 - MainPipeline - INFO - Lead not relevant: CalicoFawn (https://reddit.com/r/Chatbots/comments/1py0cgs/chinese_chatbots_xhs/)
+2026-03-19 14:02:07,400 - MainPipeline - INFO - [149/1862] Enriching: https://reddit.com/r/XSSQ/comments/1pplgpt/highlights_of_2025_icpc_challenge_championship/
+2026-03-19 14:02:07,918 - MainPipeline - INFO - Lead not relevant: Badatu (https://reddit.com/r/XSSQ/comments/1pplgpt/highlights_of_2025_icpc_challenge_championship/)
+2026-03-19 14:02:08,696 - MainPipeline - INFO - [151/1862] Enriching: https://reddit.com/r/aicuriosity/comments/1ntjgwx/revolutionizing_education_chinas_artificial/
+2026-03-19 14:02:09,106 - MainPipeline - INFO - Lead not relevant: techspecsmart (https://reddit.com/r/aicuriosity/comments/1ntjgwx/revolutionizing_education_chinas_artificial/)
+2026-03-19 14:02:09,106 - MainPipeline - INFO - [152/1862] Enriching: https://reddit.com/r/ProjectManagementPro/comments/1l7qz29/personal_ailet_ai_lead_the_advancement_first/
+2026-03-19 14:02:09,590 - MainPipeline - INFO - Lead not relevant: Particular-Speech-35 (https://reddit.com/r/ProjectManagementPro/comments/1l7qz29/personal_ailet_ai_lead_the_advancement_first/)
+2026-03-19 14:02:10,169 - MainPipeline - INFO - [154/1862] Enriching: https://reddit.com/r/XSSQ/comments/1bcqu8l/huawei_fellow_dr_liao_heng_discusses_ai_with_dr/
+2026-03-19 14:02:10,750 - MainPipeline - INFO - Lead not relevant: Badatu (https://reddit.com/r/XSSQ/comments/1bcqu8l/huawei_fellow_dr_liao_heng_discusses_ai_with_dr/)
+2026-03-19 14:02:10,751 - MainPipeline - INFO - [155/1862] Enriching: https://reddit.com/r/todayilearned/comments/1ii7g5h/til_that_american_airlines_created_sabre_the/
+2026-03-19 14:02:11,332 - MainPipeline - INFO - Lead not relevant: TMWNN (https://reddit.com/r/todayilearned/comments/1ii7g5h/til_that_american_airlines_created_sabre_the/)
+2026-03-19 14:02:11,332 - MainPipeline - INFO - [156/1862] Enriching: https://reddit.com/r/ClaudeAI/comments/1p6w71c/built_a_multiagent_system_on_cloudflare_workers/
+2026-03-19 14:02:11,701 - MainPipeline - INFO - Lead not relevant: logos_flux (https://reddit.com/r/ClaudeAI/comments/1p6w71c/built_a_multiagent_system_on_cloudflare_workers/)
+2026-03-19 14:02:11,702 - MainPipeline - INFO - [157/1862] Enriching: https://reddit.com/r/Epstein/comments/1rfy0tj/the_overlords_who_was_jeffrey_epstein_really/
+2026-03-19 14:02:12,480 - MainPipeline - INFO - Lead not relevant: Reasonable-Jello-502 (https://reddit.com/r/Epstein/comments/1rfy0tj/the_overlords_who_was_jeffrey_epstein_really/)
+2026-03-19 14:02:12,480 - MainPipeline - INFO - [158/1862] Enriching: https://reddit.com/r/PiratedGames/comments/1reb9cr/seeing_tons_of_misinformation_about_the_dangers/
+2026-03-19 14:02:12,836 - MainPipeline - INFO - Lead not relevant: gray-drow (https://reddit.com/r/PiratedGames/comments/1reb9cr/seeing_tons_of_misinformation_about_the_dangers/)
+2026-03-19 14:02:12,836 - MainPipeline - INFO - [159/1862] Enriching: https://reddit.com/r/algotrading/comments/1nf6ghg/i_just_released_my_new_opensource_trading_system/
+2026-03-19 14:02:13,195 - MainPipeline - INFO - Lead not relevant: TechPrimo (https://reddit.com/r/algotrading/comments/1nf6ghg/i_just_released_my_new_opensource_trading_system/)
+2026-03-19 14:02:13,195 - MainPipeline - INFO - [160/1862] Enriching: https://reddit.com/r/soccer/comments/1ptz5vz/nick_harris_manchester_city_legal_letters_where/
+2026-03-19 14:02:13,605 - MainPipeline - INFO - Lead not relevant: ChiefLeef22 (https://reddit.com/r/soccer/comments/1ptz5vz/nick_harris_manchester_city_legal_letters_where/)
+2026-03-19 14:02:13,605 - MainPipeline - INFO - [161/1862] Enriching: https://reddit.com/r/AI_Agents/comments/1npg0a9/i_built_10_multiagent_systems_at_enterprise_scale/
+2026-03-19 14:02:14,118 - MainPipeline - INFO - Lead not relevant: Low_Acanthisitta7686 (https://reddit.com/r/AI_Agents/comments/1npg0a9/i_built_10_multiagent_systems_at_enterprise_scale/)
+2026-03-19 14:02:14,118 - MainPipeline - INFO - [162/1862] Enriching: https://reddit.com/r/AI_Agents/comments/1o5hvhm/multiagent_systems_are_mostly_theater/
+2026-03-19 14:02:14,526 - MainPipeline - INFO - Lead not relevant: Warm-Reaction-456 (https://reddit.com/r/AI_Agents/comments/1o5hvhm/multiagent_systems_are_mostly_theater/)
+2026-03-19 14:02:14,526 - MainPipeline - INFO - [163/1862] Enriching: https://reddit.com/r/aigamedev/comments/1qxfxuu/connected_a_multiagent_system_gemini_gpt_claude/
+2026-03-19 14:02:16,497 - MainPipeline - INFO - Lead not relevant: Large-Explorer-8532 (https://reddit.com/r/aigamedev/comments/1qxfxuu/connected_a_multiagent_system_gemini_gpt_claude/)
+2026-03-19 14:02:16,497 - MainPipeline - INFO - [164/1862] Enriching: https://reddit.com/r/PrepperIntel/comments/1q1aj02/c_auris_is_now_being_reported_on_internationally/
+2026-03-19 14:02:16,817 - MainPipeline - INFO - Lead not relevant: Oblique4119375 (https://reddit.com/r/PrepperIntel/comments/1q1aj02/c_auris_is_now_being_reported_on_internationally/)
+2026-03-19 14:02:16,817 - MainPipeline - INFO - [165/1862] Enriching: https://reddit.com/r/PromptEngineering/comments/1rgfg8l/everyones_building_ai_agents_wrong_heres_what/
+2026-03-19 14:02:17,194 - MainPipeline - INFO - Lead not relevant: Critical-Elephant630 (https://reddit.com/r/PromptEngineering/comments/1rgfg8l/everyones_building_ai_agents_wrong_heres_what/)
+2026-03-19 14:02:17,195 - MainPipeline - INFO - [166/1862] Enriching: https://reddit.com/r/democrats/comments/1mayhci/read_it_and_weep_maga/
+2026-03-19 14:02:17,497 - MainPipeline - INFO - Lead not relevant: icey_sawg0034 (https://reddit.com/r/democrats/comments/1mayhci/read_it_and_weep_maga/)
+2026-03-19 14:02:17,497 - MainPipeline - INFO - [167/1862] Enriching: https://reddit.com/r/ClaudeAI/comments/1oivjvm/claude_code_is_a_beast_tips_from_6_months_of/
+2026-03-19 14:02:18,317 - MainPipeline - INFO - Lead not relevant: JokeGold5455 (https://reddit.com/r/ClaudeAI/comments/1oivjvm/claude_code_is_a_beast_tips_from_6_months_of/)
+2026-03-19 14:02:18,318 - MainPipeline - INFO - [168/1862] Enriching: https://reddit.com/r/singularity/comments/1g1ov6j/openai_introduces_swarm_an_experimental_framework/
+2026-03-19 14:02:18,726 - MainPipeline - INFO - Lead not relevant: obvithrowaway34434 (https://reddit.com/r/singularity/comments/1g1ov6j/openai_introduces_swarm_an_experimental_framework/)
+2026-03-19 14:02:18,727 - MainPipeline - INFO - [169/1862] Enriching: https://reddit.com/r/accelerate/comments/1r1pypd/something_big_is_happening_every_time_someone/
+2026-03-19 14:02:19,445 - MainPipeline - INFO - Lead not relevant: stealthispost (https://reddit.com/r/accelerate/comments/1r1pypd/something_big_is_happening_every_time_someone/)
+2026-03-19 14:02:19,445 - MainPipeline - INFO - [170/1862] Enriching: https://reddit.com/r/openclaw/comments/1r5pbvc/i_used_openclaw_to_build_a_multiagent_system_that/
+2026-03-19 14:02:19,721 - MainPipeline - INFO - Lead not relevant: openclaw-lover (https://reddit.com/r/openclaw/comments/1r5pbvc/i_used_openclaw_to_build_a_multiagent_system_that/)
+2026-03-19 14:02:19,721 - MainPipeline - INFO - [171/1862] Enriching: https://reddit.com/r/AI_Agents/comments/1il8b1i/my_guide_on_what_tools_to_use_to_build_ai_agents/
+2026-03-19 14:02:20,111 - MainPipeline - INFO - Lead not relevant: laddermanUS (https://reddit.com/r/AI_Agents/comments/1il8b1i/my_guide_on_what_tools_to_use_to_build_ai_agents/)
+2026-03-19 14:02:20,112 - MainPipeline - INFO - [172/1862] Enriching: https://reddit.com/r/Superstonk/comments/1jnk92y/gme_and_plan_b_it_happened/
+2026-03-19 14:02:20,827 - MainPipeline - INFO - Lead not relevant: raddoc22 (https://reddit.com/r/Superstonk/comments/1jnk92y/gme_and_plan_b_it_happened/)
+2026-03-19 14:02:20,827 - MainPipeline - INFO - [173/1862] Enriching: https://reddit.com/r/openclaw/comments/1r2euvp/this_is_how_ive_learned_to_create_multiagent/
+2026-03-19 14:02:21,159 - MainPipeline - INFO - Lead not relevant: kevinlu310 (https://reddit.com/r/openclaw/comments/1r2euvp/this_is_how_ive_learned_to_create_multiagent/)
+2026-03-19 14:02:21,159 - MainPipeline - INFO - [174/1862] Enriching: https://reddit.com/r/ClaudeAI/comments/1l11fo2/how_i_built_a_multiagent_orchestration_system/
+2026-03-19 14:02:21,654 - MainPipeline - INFO - Lead not relevant: ABGDreaming (https://reddit.com/r/ClaudeAI/comments/1l11fo2/how_i_built_a_multiagent_orchestration_system/)
+2026-03-19 14:02:21,654 - MainPipeline - INFO - [175/1862] Enriching: https://reddit.com/r/n8n/comments/1r24m4d/i_just_closed_a_5400_ai_agent_deal_and_im_still/
+2026-03-19 14:02:22,760 - MainPipeline - INFO - Lead not relevant: Jaded_Phone5688 (https://reddit.com/r/n8n/comments/1r24m4d/i_just_closed_a_5400_ai_agent_deal_and_im_still/)
+2026-03-19 14:02:22,760 - MainPipeline - INFO - [176/1862] Enriching: https://reddit.com/r/AI_Agents/comments/1r9owlr/i_want_to_learn_agentic_ai/
+2026-03-19 14:02:23,035 - MainPipeline - INFO - Lead not relevant: Ok_Telephone6032 (https://reddit.com/r/AI_Agents/comments/1r9owlr/i_want_to_learn_agentic_ai/)
+2026-03-19 14:02:23,035 - MainPipeline - INFO - [177/1862] Enriching: https://reddit.com/r/cscareerquestions/comments/1qzzql2/serious_what_am_i_missing_about_agentic_ai/
+2026-03-19 14:02:23,440 - MainPipeline - INFO - Lead not relevant: XellosDrak (https://reddit.com/r/cscareerquestions/comments/1qzzql2/serious_what_am_i_missing_about_agentic_ai/)
+2026-03-19 14:02:23,440 - MainPipeline - INFO - [178/1862] Enriching: https://reddit.com/r/AI_Agents/comments/1rleb2k/where_do_you_see_agentic_ai_making_a_real_impact/
+2026-03-19 14:02:23,846 - MainPipeline - INFO - Lead not relevant: Michael_Anderson_8 (https://reddit.com/r/AI_Agents/comments/1rleb2k/where_do_you_see_agentic_ai_making_a_real_impact/)
+2026-03-19 14:02:23,847 - MainPipeline - INFO - [179/1862] Enriching: https://reddit.com/r/AI_Agents/comments/1r69hc2/whats_the_most_useful_ai_agent_youve_actually_used/
+2026-03-19 14:02:24,155 - MainPipeline - INFO - Lead not relevant: Commercial-Job-9989 (https://reddit.com/r/AI_Agents/comments/1r69hc2/whats_the_most_useful_ai_agent_youve_actually_used/)
+2026-03-19 14:02:24,156 - MainPipeline - INFO - [180/1862] Enriching: https://reddit.com/r/aiagents/comments/1rdn5hq/why_is_everyone_lying_about_ai_agents/
+2026-03-19 14:02:24,460 - MainPipeline - INFO - Lead not relevant: Aggressive-Bedroom82 (https://reddit.com/r/aiagents/comments/1rdn5hq/why_is_everyone_lying_about_ai_agents/)
+2026-03-19 14:02:24,460 - MainPipeline - INFO - [181/1862] Enriching: https://reddit.com/r/n8n/comments/1r286z1/agentic_ai_browsers_are_insane_i_mean_just_look/
+2026-03-19 14:02:24,770 - MainPipeline - INFO - Lead not relevant: AnalysisObjective398 (https://reddit.com/r/n8n/comments/1r286z1/agentic_ai_browsers_are_insane_i_mean_just_look/)
+2026-03-19 14:02:24,770 - MainPipeline - INFO - [182/1862] Enriching: https://reddit.com/r/learnmachinelearning/comments/1qykv5e/why_is_everyone_jumping_on_the_agentic_ai/
+2026-03-19 14:02:25,081 - MainPipeline - INFO - Lead not relevant: Zufan_7043 (https://reddit.com/r/learnmachinelearning/comments/1qykv5e/why_is_everyone_jumping_on_the_agentic_ai/)
+2026-03-19 14:02:25,081 - MainPipeline - INFO - [183/1862] Enriching: https://reddit.com/r/technology/comments/1pe0s4x/googles_agentic_ai_wipes_users_entire_hdd_without/
+2026-03-19 14:02:25,385 - MainPipeline - INFO - Lead not relevant: lurker_bee (https://reddit.com/r/technology/comments/1pe0s4x/googles_agentic_ai_wipes_users_entire_hdd_without/)
+2026-03-19 14:02:25,385 - MainPipeline - INFO - [184/1862] Enriching: https://reddit.com/r/technology/comments/1ra0p50/amazon_blames_human_employees_for_an_ai_coding/
+2026-03-19 14:02:25,689 - MainPipeline - INFO - Lead not relevant: MarvelsGrantMan136 (https://reddit.com/r/technology/comments/1ra0p50/amazon_blames_human_employees_for_an_ai_coding/)
+2026-03-19 14:02:25,689 - MainPipeline - INFO - [185/1862] Enriching: https://reddit.com/r/Futurology/comments/1qs3p4h/ai_agents_now_have_their_own_redditstyle_social/
+2026-03-19 14:02:25,999 - MainPipeline - INFO - Lead not relevant: MetaKnowing (https://reddit.com/r/Futurology/comments/1qs3p4h/ai_agents_now_have_their_own_redditstyle_social/)
+2026-03-19 14:02:25,999 - MainPipeline - INFO - [186/1862] Enriching: https://reddit.com/r/wallstreetbets/comments/1pvx72d/after_laying_off_4000_employees_and_automating/
+2026-03-19 14:02:26,303 - MainPipeline - INFO - Lead not relevant: notyourregularninja (https://reddit.com/r/wallstreetbets/comments/1pvx72d/after_laying_off_4000_employees_and_automating/)
+2026-03-19 14:02:26,303 - MainPipeline - INFO - [187/1862] Enriching: https://reddit.com/r/technology/comments/1lntrgj/ai_agents_wrong_70_of_time_carnegie_mellon_study/
+2026-03-19 14:02:26,611 - MainPipeline - INFO - Lead not relevant: lurker_bee (https://reddit.com/r/technology/comments/1lntrgj/ai_agents_wrong_70_of_time_carnegie_mellon_study/)
+2026-03-19 14:02:26,613 - MainPipeline - INFO - [188/1862] Enriching: https://reddit.com/r/pcmasterrace/comments/1p0wi0p/microsoft_is_rolling_out_ai_agents_that_can/
+2026-03-19 14:02:27,021 - MainPipeline - INFO - Lead not relevant: Fcking_Chuck (https://reddit.com/r/pcmasterrace/comments/1p0wi0p/microsoft_is_rolling_out_ai_agents_that_can/)
+2026-03-19 14:02:27,021 - MainPipeline - INFO - [189/1862] Enriching: https://reddit.com/r/technology/comments/1pu2zd9/after_laying_off_4000_employees_and_automating/
+2026-03-19 14:02:27,318 - MainPipeline - INFO - Lead not relevant: etern4lflux (https://reddit.com/r/technology/comments/1pu2zd9/after_laying_off_4000_employees_and_automating/)
+2026-03-19 14:02:27,319 - MainPipeline - INFO - [190/1862] Enriching: https://reddit.com/r/cscareerquestions/comments/1m1uw9v/i_just_watched_an_ai_agent_take_a_jira_ticket/
+2026-03-19 14:02:27,779 - MainPipeline - INFO - Lead not relevant: ser_davos33 (https://reddit.com/r/cscareerquestions/comments/1m1uw9v/i_just_watched_an_ai_agent_take_a_jira_ticket/)
+2026-03-19 14:02:27,779 - MainPipeline - INFO - [191/1862] Enriching: https://reddit.com/r/ThatsInsane/comments/1q98ara/an_account_with_120k_followers_has_been_rapidly/
+2026-03-19 14:02:29,076 - MainPipeline - INFO - Lead not relevant: WhatYouThinkYouSee (https://reddit.com/r/ThatsInsane/comments/1q98ara/an_account_with_120k_followers_has_been_rapidly/)
+2026-03-19 14:02:29,077 - MainPipeline - INFO - [192/1862] Enriching: https://reddit.com/r/aivideo/comments/1pd9zih/pokemon_wet_market_a_fanfic_my_unhinged_ai_agent/
+2026-03-19 14:02:29,376 - MainPipeline - INFO - Lead not relevant: QualitativAI (https://reddit.com/r/aivideo/comments/1pd9zih/pokemon_wet_market_a_fanfic_my_unhinged_ai_agent/)
+2026-03-19 14:02:29,376 - MainPipeline - INFO - [193/1862] Enriching: https://reddit.com/r/technology/comments/1pb4o4o/microsoft_admits_ai_agents_can_hallucinate_and/
+2026-03-19 14:02:29,724 - MainPipeline - INFO - Lead not relevant: rkhunter_ (https://reddit.com/r/technology/comments/1pb4o4o/microsoft_admits_ai_agents_can_hallucinate_and/)
+2026-03-19 14:02:29,725 - MainPipeline - INFO - [194/1862] Enriching: https://reddit.com/r/programming/comments/1r2sa5u/slop_pull_request_is_rejected_so_slop_author/
+2026-03-19 14:02:30,093 - MainPipeline - INFO - Lead not relevant: yojimbo_beta (https://reddit.com/r/programming/comments/1r2sa5u/slop_pull_request_is_rejected_so_slop_author/)
+2026-03-19 14:02:30,810 - MainPipeline - INFO - [197/1862] Enriching: https://reddit.com/r/TOR/comments/1q56jt2/is_it_really_possible_to_have_privacy_and/
+2026-03-19 14:02:31,424 - MainPipeline - INFO - Lead not relevant: Unique_Job9031 (https://reddit.com/r/TOR/comments/1q56jt2/is_it_really_possible_to_have_privacy_and/)
+2026-03-19 14:02:31,424 - MainPipeline - INFO - [198/1862] Enriching: https://reddit.com/r/investimentos/comments/1fafu3g/investidores_acusam_assessorias_da_xp_de_gerar/
+2026-03-19 14:02:31,935 - MainPipeline - INFO - Lead not relevant: celtiberian666 (https://reddit.com/r/investimentos/comments/1fafu3g/investidores_acusam_assessorias_da_xp_de_gerar/)
+2026-03-19 14:02:33,067 - MainPipeline - INFO - [201/1862] Enriching: https://reddit.com/r/CreepyPastas/comments/1rwfxqn/kain_noin/
+2026-03-19 14:02:33,718 - MainPipeline - INFO - Lead not relevant: ClassicMembership714 (https://reddit.com/r/CreepyPastas/comments/1rwfxqn/kain_noin/)
+2026-03-19 14:02:39,107 - MainPipeline - INFO - [206/1862] Enriching: https://reddit.com/r/benfica/comments/1qduqo0/o_post_que_vai_intreter_e_que_provavelmente_todos/
+2026-03-19 14:02:39,780 - MainPipeline - INFO - Lead not relevant: Rare2g (https://reddit.com/r/benfica/comments/1qduqo0/o_post_que_vai_intreter_e_que_provavelmente_todos/)
+2026-03-19 14:02:39,781 - MainPipeline - INFO - [207/1862] Enriching: https://reddit.com/r/vozdobrasil/comments/1qbskop/a_voz_do_brasil_de_12_de_janeiro_de_2026/
+2026-03-19 14:02:40,370 - MainPipeline - INFO - Lead not relevant: Chiicones (https://reddit.com/r/vozdobrasil/comments/1qbskop/a_voz_do_brasil_de_12_de_janeiro_de_2026/)
+2026-03-19 14:02:40,370 - MainPipeline - INFO - [208/1862] Enriching: https://reddit.com/r/oteuamigo/comments/1ocrrzy/a_minha_experiencia_de_adesao_vodafone_amigo/
+2026-03-19 14:02:40,781 - MainPipeline - INFO - Lead not relevant: hardrevo (https://reddit.com/r/oteuamigo/comments/1ocrrzy/a_minha_experiencia_de_adesao_vodafone_amigo/)
+2026-03-19 14:02:40,781 - MainPipeline - INFO - [209/1862] Enriching: https://reddit.com/r/vozdobrasil/comments/1q7136n/a_voz_do_brasil_de_07_de_janeiro_de_2026/
+2026-03-19 14:02:41,359 - MainPipeline - INFO - Lead not relevant: Chiicones (https://reddit.com/r/vozdobrasil/comments/1q7136n/a_voz_do_brasil_de_07_de_janeiro_de_2026/)
+2026-03-19 14:02:41,359 - MainPipeline - INFO - [210/1862] Enriching: https://reddit.com/r/Espiritismo/comments/1o8gi21/alfred_elizabeth_surpreendem_o_mundo/
+2026-03-19 14:02:42,175 - MainPipeline - INFO - Lead not relevant: kaworo0 (https://reddit.com/r/Espiritismo/comments/1o8gi21/alfred_elizabeth_surpreendem_o_mundo/)
+2026-03-19 14:05:59,875 - MainPipeline - INFO - ==========================================
+2026-03-19 14:05:59,875 - MainPipeline - INFO - Starting Engram Lead Pipeline Run (TEST_MODE=True): 2026-03-19T14:05:59.875595
+2026-03-19 14:05:59,875 - MainPipeline - INFO - ==========================================
+2026-03-19 14:05:59,877 - MainPipeline - INFO - Phase 1: Collection from multiple platforms
+2026-03-19 14:05:59,897 - MainPipeline - INFO - Running collector: GithubCollector...
+2026-03-19 14:06:55,720 - MainPipeline - INFO - Successfully collected 195 leads from GithubCollector
+2026-03-19 14:06:55,721 - MainPipeline - INFO - Running collector: RedditCollector...
+2026-03-19 14:07:26,155 - MainPipeline - INFO - Successfully collected 456 leads from RedditCollector
+2026-03-19 14:07:26,155 - MainPipeline - INFO - Running collector: DevCollector...
+2026-03-19 14:07:35,408 - MainPipeline - INFO - Successfully collected 120 leads from DevCollector
+2026-03-19 14:07:35,408 - MainPipeline - INFO - Running collector: MediumCollector...
+2026-03-19 14:07:42,125 - MainPipeline - INFO - Successfully collected 76 leads from MediumCollector
+2026-03-19 14:07:42,125 - MainPipeline - INFO - Running collector: HackerNewsCollector...
+2026-03-19 14:09:00,662 - MainPipeline - INFO - Successfully collected 348 leads from HackerNewsCollector
+2026-03-19 14:09:00,663 - MainPipeline - INFO - Running collector: QiitaCollector...
+2026-03-19 14:09:37,650 - MainPipeline - INFO - Successfully collected 97 leads from QiitaCollector
+2026-03-19 14:09:37,650 - MainPipeline - INFO - Running collector: CSDNCollector...
+2026-03-19 14:16:36,028 - MainPipeline - INFO - Successfully collected 445 leads from CSDNCollector
+2026-03-19 14:16:36,028 - MainPipeline - INFO - Running collector: JuejinCollector...
+2026-03-19 14:17:03,371 - MainPipeline - INFO - Successfully collected 294 leads from JuejinCollector
+2026-03-19 14:17:03,372 - MainPipeline - INFO - Phase 2: Deduplicating and checking for existing leads
+2026-03-19 14:17:03,447 - MainPipeline - INFO - Loaded 231 existing lead sources from data/final\final_leads_master.csv
+2026-03-19 14:17:03,447 - MainPipeline - INFO - Filtered 1 duplicates. 2024 leads are NEW.
+2026-03-19 14:17:03,447 - MainPipeline - INFO - TEST MODE: Limiting enrichment to first 10 leads.
+2026-03-19 14:17:03,448 - MainPipeline - INFO - Phase 3: Categorization & LLM Enrichment (Filtering Relevance)
+2026-03-19 14:17:04,008 - MainPipeline - INFO - [1/10] Enriching: https://github.com/punkpeye/awesome-mcp-servers/issues/3501
+2026-03-19 14:17:18,661 - MainPipeline - INFO - Lead not relevant: AiAgentKarl (https://github.com/punkpeye/awesome-mcp-servers/issues/3501)
+2026-03-19 14:17:18,662 - MainPipeline - INFO - [2/10] Enriching: https://github.com/chatmcp/mcpso/issues/917
+2026-03-19 14:17:32,310 - MainPipeline - INFO - Lead not relevant: AiAgentKarl (https://github.com/chatmcp/mcpso/issues/917)
+2026-03-19 14:17:32,310 - MainPipeline - INFO - [3/10] Enriching: https://github.com/chatmcp/mcpso/issues/916
+2026-03-19 14:19:27,575 - MainPipeline - INFO - ==========================================
+2026-03-19 14:19:27,577 - MainPipeline - INFO - Starting Engram Lead Pipeline Run (TEST_MODE=True): 2026-03-19T14:19:27.577907
+2026-03-19 14:19:27,578 - MainPipeline - INFO - ==========================================
+2026-03-19 14:19:27,579 - MainPipeline - INFO - Phase 1: Collection from multiple platforms
+2026-03-19 14:19:27,584 - MainPipeline - INFO - Running collector: GithubCollector...
+2026-03-19 14:20:31,708 - MainPipeline - INFO - Successfully collected 210 leads from GithubCollector
+2026-03-19 14:20:31,709 - MainPipeline - INFO - Running collector: RedditCollector...
+2026-03-19 14:21:08,826 - MainPipeline - INFO - Successfully collected 456 leads from RedditCollector
+2026-03-19 14:21:08,826 - MainPipeline - INFO - Running collector: DevCollector...
+2026-03-19 14:21:20,568 - MainPipeline - INFO - Successfully collected 120 leads from DevCollector
+2026-03-19 14:21:20,569 - MainPipeline - INFO - Running collector: MediumCollector...
+2026-03-19 14:21:28,387 - MainPipeline - INFO - Successfully collected 77 leads from MediumCollector
+2026-03-19 14:21:28,387 - MainPipeline - INFO - Running collector: HackerNewsCollector...
+2026-03-19 14:23:00,792 - MainPipeline - INFO - Successfully collected 354 leads from HackerNewsCollector
+2026-03-19 14:23:00,792 - MainPipeline - INFO - Running collector: QiitaCollector...
+2026-03-19 14:24:45,682 - MainPipeline - INFO - Successfully collected 97 leads from QiitaCollector
+2026-03-19 14:24:45,683 - MainPipeline - INFO - Running collector: CSDNCollector...
+2026-03-19 14:41:47,961 - MainPipeline - INFO - ==========================================
+2026-03-19 14:41:47,961 - MainPipeline - INFO - Starting Engram Lead Pipeline Run (TEST_MODE=True): 2026-03-19T14:41:47.961497
+2026-03-19 14:41:47,961 - MainPipeline - INFO - ==========================================
+2026-03-19 14:41:47,962 - MainPipeline - INFO - Phase 1: Collection from multiple platforms
+2026-03-19 14:41:47,964 - MainPipeline - INFO - Running collector: RedditCollector...
+2026-03-19 14:42:34,863 - MainPipeline - INFO - Successfully collected 456 leads from RedditCollector
+2026-03-19 14:42:34,863 - MainPipeline - INFO - Phase 2: Deduplicating and checking for existing leads
+2026-03-19 14:42:34,986 - MainPipeline - INFO - Loaded 231 existing lead sources from data/final\final_leads_master.csv
+2026-03-19 14:42:34,986 - MainPipeline - INFO - Filtered 0 duplicates. 456 leads are NEW.
+2026-03-19 14:42:34,986 - MainPipeline - INFO - TEST MODE: Limiting enrichment to first 10 leads.
+2026-03-19 14:42:34,986 - MainPipeline - INFO - Phase 3: Categorization & LLM Enrichment (Filtering Relevance)
+2026-03-19 14:42:35,574 - MainPipeline - INFO - [1/10] Enriching: https://reddit.com/r/gsstk2026/comments/1rvuly5/cuando_un_agente_cae_todos_caen_asi07_y_asi08_la/
+2026-03-19 15:32:36,936 - MainPipeline - INFO - ==========================================
+2026-03-19 15:32:36,938 - MainPipeline - INFO - Starting Engram Lead Pipeline Run (TEST_MODE=True): 2026-03-19T15:32:36.938761
+2026-03-19 15:32:36,938 - MainPipeline - INFO - ==========================================
+2026-03-19 15:32:36,939 - MainPipeline - INFO - Phase 1: Collection from multiple platforms
+2026-03-19 15:32:39,055 - MainPipeline - INFO - Running collector: RedditCollector...
+2026-03-19 15:33:14,611 - MainPipeline - INFO - Successfully collected 457 leads from RedditCollector
+2026-03-19 15:33:14,611 - MainPipeline - INFO - Phase 2: Deduplicating and checking for existing leads
+2026-03-19 15:33:14,698 - MainPipeline - INFO - Loaded 231 existing lead sources from data/final\final_leads_master.csv
+2026-03-19 15:33:14,699 - MainPipeline - INFO - Filtered 0 duplicates. 457 leads are NEW.
+2026-03-19 15:33:14,699 - MainPipeline - INFO - TEST MODE: Limiting enrichment to first 10 leads.
+2026-03-19 15:33:14,699 - MainPipeline - INFO - Phase 3: Categorization & LLM Enrichment (Filtering Relevance)
+2026-03-19 15:35:11,708 - MainPipeline - INFO - [2/10] Enriching: https://reddit.com/r/JapaneseMovies/comments/1ckq8dr/denki_groove_the_movie/
+2026-03-19 15:35:37,604 - MainPipeline - ERROR - Error enriching lead scrungusbeef: unsupported operand type(s) for /: 'NoneType' and 'float'
+2026-03-19 15:35:37,606 - MainPipeline - INFO - [3/10] Enriching: https://reddit.com/r/n8n/comments/1r24m4d/i_just_closed_a_5400_ai_agent_deal_and_im_still/
+2026-03-19 15:37:11,957 - MainPipeline - INFO - [4/10] Enriching: https://reddit.com/r/AI_Agents/comments/1r69hc2/whats_the_most_useful_ai_agent_youve_actually_used/
+2026-03-19 15:37:43,582 - MainPipeline - INFO - Lead not relevant: Commercial-Job-9989 (https://reddit.com/r/AI_Agents/comments/1r69hc2/whats_the_most_useful_ai_agent_youve_actually_used/)
+2026-03-19 15:37:43,582 - MainPipeline - INFO - [5/10] Enriching: https://reddit.com/r/aiagents/comments/1rdn5hq/why_is_everyone_lying_about_ai_agents/
+2026-03-19 15:38:21,512 - MainPipeline - INFO - [6/10] Enriching: https://reddit.com/r/passive_income/comments/1r2hytx/how_i_make_300500day_with_an_ai_agent_on_a_mac/
+2026-03-19 15:39:11,333 - MainPipeline - INFO - [7/10] Enriching: https://reddit.com/r/claude/comments/1r8pkhf/i_applied_to_1000_jobs_with_ai_agent_in_48_hours/
+2026-03-19 15:39:46,418 - MainPipeline - INFO - Lead not relevant: Thick_Professional14 (https://reddit.com/r/claude/comments/1r8pkhf/i_applied_to_1000_jobs_with_ai_agent_in_48_hours/)
+2026-03-19 15:39:46,418 - MainPipeline - INFO - [8/10] Enriching: https://reddit.com/r/AI_Agents/comments/1rdf5v7/my_guide_on_what_tools_to_use_to_build_ai_agents/
+2026-03-19 15:42:40,123 - MainPipeline - INFO - [9/10] Enriching: https://reddit.com/r/AI_Agents/comments/1qzbsy8/how_are_people_actually_building_ai_agents_like/
+2026-03-19 15:43:30,667 - MainPipeline - INFO - [10/10] Enriching: https://reddit.com/r/AI_Agents/comments/1rkotlf/i_built_ai_agents_for_20_startups_this_year_here/
+2026-03-19 15:45:16,454 - MainPipeline - INFO - Qualified 7 relevant prospects out of 10 new leads.
+2026-03-19 15:45:16,455 - MainPipeline - INFO - Phase 4: Profile Enrichment, Contact Finding & Scoring
+2026-03-19 15:45:16,472 - MainPipeline - INFO - Phase 5: Generating personalized outreach messages
+2026-03-19 16:17:02,687 - MainPipeline - INFO - ==========================================
+2026-03-19 16:17:02,687 - MainPipeline - INFO - Starting Engram Lead Pipeline Run (TEST_MODE=True): 2026-03-19T16:17:02.687469
+2026-03-19 16:17:02,687 - MainPipeline - INFO - ==========================================
+2026-03-19 16:17:02,688 - MainPipeline - INFO - Phase 1: Collection from multiple platforms
+2026-03-19 16:17:02,706 - MainPipeline - INFO - Running collector: RedditCollector...
+2026-03-19 16:21:55,556 - MainPipeline - INFO - Successfully collected 431 leads from RedditCollector
+2026-03-19 16:21:55,558 - MainPipeline - INFO - Phase 2: Deduplicating and checking for existing leads
+2026-03-19 16:21:55,749 - MainPipeline - INFO - Loaded 231 existing lead sources from data/final\final_leads_master.csv
+2026-03-19 16:21:55,751 - MainPipeline - INFO - Filtered 0 duplicates. 431 leads are NEW.
+2026-03-19 16:21:55,751 - MainPipeline - INFO - TEST MODE: Limiting enrichment to first 10 leads.
+2026-03-19 16:21:55,751 - MainPipeline - INFO - Phase 3: Categorization & LLM Enrichment (Filtering Relevance)
+2026-03-19 16:22:12,381 - MainPipeline - INFO - [2/10] Enriching: https://reddit.com/r/vibecoding/comments/1p7adza/hice_el_mismo_agente_ia_local_con_langchain/
+2026-03-19 16:22:25,986 - MainPipeline - INFO - Lead not relevant: jokiruiz (https://reddit.com/r/vibecoding/comments/1p7adza/hice_el_mismo_agente_ia_local_con_langchain/)
+2026-03-19 16:22:25,987 - MainPipeline - INFO - [3/10] Enriching: https://reddit.com/r/langchainfr/comments/151xp1x/boostez_votre_entreprise_avec_des_noms_de/
+2026-03-19 16:22:39,346 - MainPipeline - INFO - Lead not relevant: Orfvr (https://reddit.com/r/langchainfr/comments/151xp1x/boostez_votre_entreprise_avec_des_noms_de/)
+2026-03-19 16:22:39,347 - MainPipeline - INFO - [4/10] Enriching: https://reddit.com/r/FAANGrecruiting/comments/1pucqte/roast_my_resume_why_am_i_not_getting_interviews/
+2026-03-19 16:22:52,871 - MainPipeline - INFO - Lead not relevant: B00OO00 (https://reddit.com/r/FAANGrecruiting/comments/1pucqte/roast_my_resume_why_am_i_not_getting_interviews/)
+2026-03-19 16:22:52,871 - MainPipeline - INFO - [5/10] Enriching: https://reddit.com/r/shittymoviedetails/comments/1praul3/in_heat_1995_robert_de_niro_is_shown_having/
+2026-03-19 16:23:06,481 - MainPipeline - INFO - Lead not relevant: Necessary-Rip-6612 (https://reddit.com/r/shittymoviedetails/comments/1praul3/in_heat_1995_robert_de_niro_is_shown_having/)
+2026-03-19 16:23:06,482 - MainPipeline - INFO - [6/10] Enriching: https://reddit.com/r/CreateMod/comments/1r2z7bp/my_minecraft_cant_handle_new_clockwork_bearing/
+2026-03-19 16:23:20,032 - MainPipeline - INFO - Lead not relevant: Upset_Froyo_8002 (https://reddit.com/r/CreateMod/comments/1r2z7bp/my_minecraft_cant_handle_new_clockwork_bearing/)
+2026-03-19 16:23:33,424 - MainPipeline - INFO - [8/10] Enriching: https://reddit.com/r/GlobalPowers/comments/1rl84by/event_canadas_triple_crown_mine_build_repeat/
+2026-03-19 16:23:47,056 - MainPipeline - INFO - Lead not relevant: that_tealoving_nerd (https://reddit.com/r/GlobalPowers/comments/1rl84by/event_canadas_triple_crown_mine_build_repeat/)
+2026-03-19 16:23:47,056 - MainPipeline - INFO - [9/10] Enriching: https://reddit.com/r/n8n/comments/1pesirm/automating_my_job_search_with_n8n_ai_it_ranks/
+2026-03-19 16:24:00,424 - MainPipeline - INFO - Lead not relevant: TieTraditional5532 (https://reddit.com/r/n8n/comments/1pesirm/automating_my_job_search_with_n8n_ai_it_ranks/)
+2026-03-19 16:24:00,424 - MainPipeline - INFO - [10/10] Enriching: https://reddit.com/r/programacion/comments/1pmso88/cree_al_pombero_un_agente_que_vigila_tu_sistema/
+2026-03-19 16:24:14,002 - MainPipeline - INFO - Lead not relevant: DriverRadiant1912 (https://reddit.com/r/programacion/comments/1pmso88/cree_al_pombero_un_agente_que_vigila_tu_sistema/)
+2026-03-19 16:24:14,002 - MainPipeline - INFO - Qualified 0 relevant prospects out of 10 new leads.
+2026-03-19 16:24:14,002 - MainPipeline - INFO - No relevant leads found in this batch after LLM enrichment.

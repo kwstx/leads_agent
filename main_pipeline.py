@@ -37,31 +37,39 @@ except ImportError as e:
 MASTER_LEADS_DIR = "data/final"
 MASTER_LEADS_PATH = os.path.join(MASTER_LEADS_DIR, "final_leads_master.csv")
 LOG_FILENAME = f"pipeline_run.log" # Overwrite same log for recent run or use date?
+TEST_MODE = True # Set to False for production runs
 
 # Initialize Logger
 logger = setup_logger("MainPipeline", log_file=LOG_FILENAME)
 
 def main_pipeline():
     logger.info("==========================================")
-    logger.info(f"Starting Engram Lead Pipeline Run: {datetime.now().isoformat()}")
+    logger.info(f"Starting Engram Lead Pipeline Run (TEST_MODE={TEST_MODE}): {datetime.now().isoformat()}")
     logger.info("==========================================")
     
     load_dotenv()
     
     try:
+        # Pre-check: LLM Connection
+        logger.info("Initializing LLM client...")
+        llm_enricher = LLMEnricher()
+        # Verify connectivity with a simple check (not a full prompt)
+        try:
+            # We don't want to waste tokens/time here, but we want to fail fast if disconnected.
+            # Usually creating the client is enough, but testing the availability is better.
+            import requests
+            requests.get(llm_enricher.base_url, timeout=2)
+            logger.info(f"LLM connection verified at {llm_enricher.base_url}")
+        except Exception:
+            logger.warning(f"Could not reach Ollama at {llm_enricher.base_url}. The enrichment phase may fail.")
+            logger.warning("Make sure to run 'ollama serve' in a separate terminal.")
+
         # Phase 1: Data Collection
         logger.info("Phase 1: Collection from multiple platforms")
         languages = os.getenv("LANGUAGES", "en,zh,es,pt,ja").split(",")
         
         collectors = [
-            GithubCollector(languages=languages),
-            RedditCollector(), # Internal full keyword list
-            DevCollector(),    # Internal updated defaults
-            MediumCollector(), # Internal updated defaults
-            HackerNewsCollector(languages=languages),
-            QiitaCollector(languages=[l for l in languages if l in ['ja', 'en']]),
-            CSDNCollector(languages=[l for l in languages if l in ['zh', 'en']]),
-            JuejinCollector(languages=[l for l in languages if l in ['zh', 'en']])
+            RedditCollector(), # Test with Reddit (fastest/most reliable for testing)
         ]
         
         all_raw_leads = []
@@ -107,6 +115,10 @@ def main_pipeline():
             logger.info("No fresh leads to process today. Exiting.")
             return
 
+        if TEST_MODE:
+            new_leads = new_leads[:10]
+            logger.info(f"TEST MODE: Limiting enrichment to first {len(new_leads)} leads.")
+
         # Phase 3: Categorization & LLM Enrichment
         logger.info("Phase 3: Categorization & LLM Enrichment (Filtering Relevance)")
         categorizer = LeadCategorizer()
@@ -124,7 +136,12 @@ def main_pipeline():
                 lead.is_relevant = enrichment.get('is_relevant', False)
                 lead.problem = enrichment.get('problem_description', 'N/A')
                 # Optional: use LLM's intent score too
-                llm_intent = enrichment.get('intent_score', 1) / 10.0
+                # Use .get with a default and ensure it is a number
+                raw_intent = enrichment.get('intent_score')
+                if raw_intent is None:
+                    raw_intent = 1
+                
+                llm_intent = float(raw_intent) / 10.0
                 lead.intent_score = max(lead.intent_score, llm_intent)
                 
                 if lead.is_relevant:
