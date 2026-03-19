@@ -6,7 +6,7 @@ from .base_collector import BaseCollector
 
 class MediumCollector(BaseCollector):
     # Medium allows scraping their public RSS feeds for tags
-    def __init__(self, tags: List[str] = ["ai", "machine-learning", "backend-development"]):
+    def __init__(self, tags: List[str] = ["ai", "agents", "langchain", "automation", "spanish", "portuguese", "japanese", "chinese"]):
         super().__init__()
         self.tags = tags
         self.base_url = "https://medium.com/feed/tag/"

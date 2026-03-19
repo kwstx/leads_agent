@@ -51,16 +51,17 @@ def main_pipeline():
     try:
         # Phase 1: Data Collection
         logger.info("Phase 1: Collection from multiple platforms")
-        query = os.getenv("SEARCH_QUERY", "agentic-ai tool issues")
+        languages = os.getenv("LANGUAGES", "en,zh,es,pt,ja").split(",")
+        
         collectors = [
-            GithubCollector(query=query),
-            RedditCollector(),
-            DevCollector(tags=["ai", "agents", "automation"]),
-            MediumCollector(tags=["ai", "agents", "langchain"]),
-            HackerNewsCollector(query=query),
-            QiitaCollector(query="エージェント AI"),
-            CSDNCollector(query="智能体 AI"),
-            JuejinCollector(query="智能体 AI")
+            GithubCollector(languages=languages),
+            RedditCollector(), # Internal full keyword list
+            DevCollector(),    # Internal updated defaults
+            MediumCollector(), # Internal updated defaults
+            HackerNewsCollector(languages=languages),
+            QiitaCollector(languages=[l for l in languages if l in ['ja', 'en']]),
+            CSDNCollector(languages=[l for l in languages if l in ['zh', 'en']]),
+            JuejinCollector(languages=[l for l in languages if l in ['zh', 'en']])
         ]
         
         all_raw_leads = []
@@ -162,20 +163,24 @@ def main_pipeline():
         
         # Ensure we don't have schema mismatches between CSV and model
         if os.path.exists(MASTER_LEADS_PATH):
-            master_df = pd.read_csv(MASTER_LEADS_PATH)
-            # Standardize columns to match current Lead model if columns differ slightly
-            updated_master_df = pd.concat([master_df, new_df], ignore_index=True)
-            # Final dedupe check (URL is best primary key)
-            if 'source_link' in updated_master_df.columns:
-                updated_master_df = updated_master_df.drop_duplicates(subset=['source_link'], keep='last')
-            elif 'url' in updated_master_df.columns:
-                 updated_master_df = updated_master_df.drop_duplicates(subset=['url'], keep='last')
+            try:
+                master_df = pd.read_csv(MASTER_LEADS_PATH, encoding='utf-8-sig')
+                # Standardize columns to match current Lead model if columns differ slightly
+                updated_master_df = pd.concat([master_df, new_df], ignore_index=True)
+                # Final dedupe check (URL is best primary key)
+                if 'source_link' in updated_master_df.columns:
+                    updated_master_df = updated_master_df.drop_duplicates(subset=['source_link'], keep='last')
+                elif 'url' in updated_master_df.columns:
+                     updated_master_df = updated_master_df.drop_duplicates(subset=['url'], keep='last')
+            except Exception as e:
+                logger.error(f"Error reading master file during merge: {e}. Appending new data to fallback.")
+                updated_master_df = new_df
         else:
             updated_master_df = new_df
             
-        # Save updated master
+        # Save updated master with international support (UTF-8 with BOM)
         os.makedirs(MASTER_LEADS_DIR, exist_ok=True)
-        updated_master_df.to_csv(MASTER_LEADS_PATH, index=False)
+        updated_master_df.to_csv(MASTER_LEADS_PATH, index=False, encoding='utf-8-sig')
         logger.info(f"Master file updated: {len(updated_master_df)} total records ({len(qualified_new_leads)} added).")
 
         # Phase 7: Output to Social Channels / Sheets

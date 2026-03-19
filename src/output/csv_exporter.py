@@ -12,5 +12,5 @@ class CSVExporter:
         mode = 'a' if append and os.path.exists(filepath) else 'w'
         header = not (append and os.path.exists(filepath))
         
-        df.to_csv(filepath, index=False, mode=mode, header=header)
+        df.to_csv(filepath, index=False, mode=mode, header=header, encoding='utf-8-sig')
         print(f"Exported {len(leads)} leads to {filepath} (mode: {'append' if mode == 'a' else 'overwrite'})")

@@ -21,7 +21,7 @@ class LeadEnricher:
 
     def _get_prompt(self, content: str) -> str:
         return f"""You are an expert at identifying high-value leads for an AI agent communication platform.
-Analyze the following content and determine if the author is building AI agents and if they are experiencing technical challenges relevant to agent-to-agent communication or integration.
+Analyze the following content (which may be in English, Chinese, Spanish, Portuguese, Japanese, or other languages) and determine if the author is building AI agents and if they are experiencing technical challenges relevant to agent-to-agent communication or integration.
 
 Content:
 ---
@@ -35,9 +35,11 @@ Then, identify if they are facing problems such as:
 - Integration issues with third-party tools or other agents.
 - Reliability, discovery, or orchestration challenges in multi-agent systems.
 
+IMPORTANT: Even if the source text is in another language, your fields (especially 'problem_description') MUST be in English.
+
 Return a JSON object with the following fields:
 1. "is_relevant": (boolean) True if they are building AI agents AND experiencing relevant problems.
-2. "problem_description": (string) A short, concise description of the specific technical problem they are facing. If "is_relevant" is False, this can be "N/A".
+2. "problem_description": (string) A short, concise description IN ENGLISH of the specific technical problem they are facing. If "is_relevant" is False, this can be "N/A".
 3. "intent_score": (integer, 1-10) A score from 1 to 10 based on how urgently they seem to need a solution for agent communication/integration. 10 is highest.
 
 Response must be valid JSON only."""

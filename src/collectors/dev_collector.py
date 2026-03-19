@@ -5,7 +5,7 @@ from ..schema.lead_schema import Lead
 from .base_collector import BaseCollector
 
 class DevCollector(BaseCollector):
-    def __init__(self, tags: List[str] = ["ai", "machinelearning", "backend"]):
+    def __init__(self, tags: List[str] = ["ai", "agents", "automation", "python", "spanish", "portuguese", "japanese", "chinese"]):
         super().__init__()
         self.tags = tags
         self.base_url = "https://dev.to"

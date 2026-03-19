@@ -3,11 +3,12 @@ from typing import List
 from ..schema.lead_schema import Lead
 from .base_collector import BaseCollector
 from src.utils.config import Config
+from src.utils.multilingual_keywords import get_keywords_by_lang
 
 class QiitaCollector(BaseCollector):
-    def __init__(self, query: str = "エージェント AI"):
+    def __init__(self, languages: List[str] = ["ja", "en"]):
         super().__init__()
-        self.query = query
+        self.languages = languages
         self.api_key = Config.QIITA_API_KEY
 
     def collect(self) -> List[Lead]:
@@ -17,31 +18,41 @@ class QiitaCollector(BaseCollector):
             headers["Authorization"] = f"Bearer {self.api_key}"
             
         url = "https://qiita.com/api/v2/items"
-        params = {
-            "query": self.query,
-            "per_page": 20,
-            "page": 1
-        }
         
-        try:
-            response = requests.get(url, headers=headers, params=params)
-            if response.status_code == 200:
-                items = response.json()
-                for item in items:
-                    leads.append(Lead(
-                        username=item["user"]["id"],
-                        platform="Qiita",
-                        content=item["body"] or item["title"],
-                        problem=item["title"],
-                        source_link=item["url"],
-                        tags=[tag["name"] for tag in item["tags"]]
-                    ))
-            elif response.status_code == 403:
-                # Often occurs due to rate limit
-                print(f"Qiita API Rate Limit reached (or forbidden). Skipping.")
-            else:
-                print(f"Qiita API Error: {response.status_code} - {response.text}")
-        except Exception as e:
-            print(f"Exception in QiitaCollector: {e}")
+        all_keywords = []
+        for lang in self.languages:
+            all_keywords.extend(get_keywords_by_lang(lang))
             
-        return leads
+        for keyword in all_keywords:
+            params = {
+                "query": keyword,
+                "per_page": 10,
+                "page": 1
+            }
+            
+            try:
+                response = requests.get(url, headers=headers, params=params)
+                response.encoding = 'utf-8'
+                
+                if response.status_code == 200:
+                    items = response.json()
+                    for item in items:
+                        leads.append(Lead(
+                            username=item["user"]["id"],
+                            platform="Qiita",
+                            content=item["rendered_body"] or item["body"] or item["title"],
+                            problem=item["title"],
+                            source_link=item["url"],
+                            tags=[tag["name"] for tag in item["tags"]] + [keyword]
+                        ))
+                elif response.status_code == 403:
+                    print(f"Qiita API Rate Limit reached for '{keyword}'. Skipping.")
+                    break # Usually affects all subsequent calls
+                else:
+                    print(f"Qiita API Error for '{keyword}': {response.status_code}")
+            except Exception as e:
+                print(f"Exception in QiitaCollector for '{keyword}': {e}")
+            
+        # Deduplicate
+        unique_leads = {lead.source_link: lead for lead in leads}.values()
+        return list(unique_leads)
