@@ -1,4 +1,4 @@
-# Engram Lead Discovery & Enrichment System
+# Lead Discovery & Enrichment System
 
 A fully automated, global lead discovery and enrichment system specifically designed for **Engram**.
 
